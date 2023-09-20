@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Pging3Example</string>
+    <string name="app_name">Paging3Example</string>
+    <string name="games" translatable="false">Games:</string>
 </resources>
