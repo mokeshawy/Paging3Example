@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:text="@string/games"
         android:textSize="@dimen/_25sdp"
         android:textStyle="bold"
@@ -24,12 +24,25 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:clipToPadding="false"
+        android:layout_marginTop="@dimen/_5sdp"
         android:paddingBottom="@dimen/_45sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleTv"
         tools:listitem="@layout/item_games" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/gamesRV"
+        app:layout_constraintEnd_toEndOf="@+id/gamesRV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

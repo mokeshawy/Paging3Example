@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">Paging3Example</string>
     <string name="games" translatable="false">الألعاب:</string>
+    <string name="wrongMessage">حدث خطأ، حاول مرة آخرى!</string>
 </resources>

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Paging3Example</string>
     <string name="games" translatable="false">Games:</string>
+    <string name="wrongMessage">Something wrong happened please try again!</string>
 </resources>
