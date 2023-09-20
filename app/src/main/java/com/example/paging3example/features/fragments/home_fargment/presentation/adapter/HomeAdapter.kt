@@ -1,13 +1,13 @@
-package com.example.paging3example.fragments.home_fargment.presentation.adapter
+package com.example.paging3example.features.fragments.home_fargment.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.core.Utils
+import com.example.paging3example.core.Utils
 import com.example.paging3example.databinding.ItemGamesBinding
-import com.example.paging3example.fragments.home_fargment.domain.model.GamesEntity
+import com.example.paging3example.features.fragments.home_fargment.domain.model.GamesEntity
 
 class HomeAdapter(diffUtil: DiffUtil.ItemCallback<GamesEntity>) :
     PagingDataAdapter<GamesEntity, HomeAdapter.ViewHolder>(diffUtil) {

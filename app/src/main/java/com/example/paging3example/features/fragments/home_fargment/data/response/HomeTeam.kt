@@ -1,9 +1,9 @@
-package com.example.paging3example.fragments.home_fargment.data.response
+package com.example.paging3example.features.fragments.home_fargment.data.response
 
 
 import com.google.gson.annotations.SerializedName
 
-data class VisitorTeam(
+data class HomeTeam(
     @SerializedName("abbreviation")
     val abbreviation: String,
     @SerializedName("city")

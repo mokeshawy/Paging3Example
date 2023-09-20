@@ -1,6 +1,6 @@
-package com.example.core.api_services
+package com.example.paging3example.core.api_services
 
-import com.example.paging3example.fragments.home_fargment.data.response.GamesResponseDto
+import com.example.paging3example.features.fragments.home_fargment.data.response.GamesResponseDto
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

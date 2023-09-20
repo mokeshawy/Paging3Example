@@ -1,9 +1,9 @@
-package com.example.paging3example.fragments.home_fargment.data.paging_source
+package com.example.paging3example.features.fragments.home_fargment.data.paging_source
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.example.core.api_services.GamesApiServices
-import com.example.paging3example.fragments.home_fargment.data.response.GamesResponse
+import com.example.paging3example.core.api_services.GamesApiServices
+import com.example.paging3example.features.fragments.home_fargment.data.response.GamesResponse
 
 const val PAGE_SIZE = 10
 

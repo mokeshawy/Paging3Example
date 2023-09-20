@@ -1,4 +1,4 @@
-package com.example.paging3example.activitis
+package com.example.paging3example.features.activitis
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

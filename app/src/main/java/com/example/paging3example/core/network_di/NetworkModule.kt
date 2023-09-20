@@ -1,7 +1,7 @@
-package com.example.core.network_di
+package com.example.paging3example.core.network_di
 
 import android.content.Context
-import com.example.core.api_services.GamesApiServices
+import com.example.paging3example.core.api_services.GamesApiServices
 import com.example.paging3example.R
 import dagger.Module
 import dagger.Provides
@@ -33,7 +33,7 @@ object NetworkModule {
             val newBuilder = chain.request().newBuilder()
             newBuilder.addHeader(
                 "X-RapidAPI-Key",
-                "3e4182e71fmsha5349893df1249ap1f73bbjsn3b1030841bc4"
+                "" //TODO APIKEY HERE
             )
             newBuilder.addHeader("X-RapidAPI-Host", "free-nba.p.rapidapi.com")
             newBuilder.build().let { chain.proceed(it) }

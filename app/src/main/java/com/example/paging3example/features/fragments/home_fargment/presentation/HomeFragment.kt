@@ -1,4 +1,4 @@
-package com.example.paging3example.fragments.home_fargment.presentation
+package com.example.paging3example.features.fragments.home_fargment.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,9 +15,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.paging3example.R
 import com.example.paging3example.databinding.FragmentHomeBinding
-import com.example.paging3example.fragments.home_fargment.domain.model.GamesEntity
-import com.example.paging3example.fragments.home_fargment.domain.viewmodel.HomeViewModel
-import com.example.paging3example.fragments.home_fargment.presentation.adapter.HomeAdapter
+import com.example.paging3example.features.fragments.home_fargment.domain.model.GamesEntity
+import com.example.paging3example.features.fragments.home_fargment.domain.viewmodel.HomeViewModel
+import com.example.paging3example.features.fragments.home_fargment.presentation.adapter.HomeAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 

@@ -1,4 +1,4 @@
-package com.example.paging3example.fragments.home_fargment.data.response
+package com.example.paging3example.features.fragments.home_fargment.data.response
 
 
 import com.google.gson.annotations.SerializedName

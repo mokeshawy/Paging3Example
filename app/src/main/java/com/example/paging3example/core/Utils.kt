@@ -1,4 +1,4 @@
-package com.example.core
+package com.example.paging3example.core
 
 import android.annotation.SuppressLint
 import java.text.SimpleDateFormat

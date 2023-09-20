@@ -8,6 +8,6 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.paging3example.fragments.home_fargment.presentation.HomeFragment"
+        android:name="com.example.paging3example.features.fragments.home_fargment.presentation.HomeFragment"
         tools:layout="@layout/fragment_home" />
 </navigation>
