@@ -7,16 +7,14 @@ import com.example.paging3example.features.fragments.home_fargment.data.response
 
 const val PAGE_SIZE = 10
 
-class GamesPagingSource(private val gamesApiServices: GamesApiServices) :
-    PagingSource<Int, GamesResponse>() {
+class GamesPagingSource(private val gamesApiServices: GamesApiServices) : PagingSource<Int, GamesResponse>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, GamesResponse> {
         return try {
             val nextPageNumber = params.key ?: 0
-            val response =
-                gamesApiServices.getAllGames(pageNo = nextPageNumber, pageSize = PAGE_SIZE)
+            val response = gamesApiServices.getAllGames(pageNo = nextPageNumber, pageSize = PAGE_SIZE)
             LoadResult.Page(
-                data = response.body()?.gamesResponse ?: emptyList(),
+                data = response.gamesResponse,
                 prevKey = null,
                 nextKey = nextPageNumber + 1
             )

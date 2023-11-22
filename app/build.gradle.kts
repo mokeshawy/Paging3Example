@@ -2,7 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
-    id("com.google.dagger.hilt.android")
+    //id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -55,6 +55,7 @@ android {
     }
 
     buildFeatures {
+        buildConfig = true
         viewBinding = true
     }
 }
@@ -75,8 +76,8 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     // navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.2")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.2")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
 
     // coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
@@ -88,22 +89,51 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
 
     //ViewModels delegation extensions for activity
-    implementation("androidx.activity:activity-ktx:1.7.2")
-    implementation("androidx.fragment:fragment-ktx:1.6.1")
+    implementation("androidx.activity:activity-ktx:1.8.1")
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
 
-    //hilt
-    implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-android-compiler:2.48")
-    implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
 
-    //Retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     // paging
     implementation("androidx.paging:paging-runtime-ktx:3.2.1")
-    
+
     // sdp and ssp
     implementation("com.intuit.sdp:sdp-android:1.1.0")
     implementation("com.intuit.ssp:ssp-android:1.1.0")
+
+
+    // timber
+    implementation("com.jakewharton.timber:timber:5.0.1")
+
+
+    //Android Remote Debugger
+    debugImplementation("com.github.zerobranch.android-remote-debugger:debugger:1.1.2")
+    releaseImplementation("com.github.zerobranch.android-remote-debugger:noop:1.1.0")
+
+    val koinVersion = "3.4.0"
+    implementation("io.insert-koin:koin-android:$koinVersion")
+
+
+
+    val ktorVersion = "2.3.5"
+    // Ktor
+    implementation("io.ktor:ktor-client-core:$ktorVersion")
+
+    // Ktor network
+    implementation("io.ktor:ktor-client-cio:$ktorVersion")
+    implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
+    implementation("io.ktor:ktor-client-android:$ktorVersion")
+    implementation("io.ktor:ktor-client-websockets:$ktorVersion")
+    implementation("io.ktor:ktor-client-json:$ktorVersion")
+    implementation("io.ktor:ktor-client-logging:$ktorVersion")
+    implementation("io.ktor:ktor-client-gson:$ktorVersion")
+    implementation("io.ktor:ktor-serialization-gson:$ktorVersion")
+
+    // Ktor serialization
+    implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+    implementation("io.ktor:ktor-client-serialization:$ktorVersion")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.2")
+
 }
