@@ -2,7 +2,9 @@ package com.example.paging3example.features.fragments.home_fargment.data.respons
 
 
 import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class VisitorTeam(
     @SerializedName("abbreviation")
     val abbreviation: String,

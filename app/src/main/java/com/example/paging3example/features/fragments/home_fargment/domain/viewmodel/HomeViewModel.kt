@@ -11,13 +11,10 @@ import com.example.paging3example.core.api_services.GamesApiServices
 import com.example.paging3example.features.fragments.home_fargment.data.paging_source.GamesPagingSource
 import com.example.paging3example.features.fragments.home_fargment.data.paging_source.PAGE_SIZE
 import com.example.paging3example.features.fragments.home_fargment.domain.model.GamesEntity
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import javax.inject.Inject
 
-@HiltViewModel
-class HomeViewModel @Inject constructor(private val gamesApiServices: GamesApiServices) :
+class HomeViewModel(private val gamesApiServices: GamesApiServices) :
     ViewModel() {
 
     fun getPaginatedGamesList(): Flow<PagingData<GamesEntity>> {

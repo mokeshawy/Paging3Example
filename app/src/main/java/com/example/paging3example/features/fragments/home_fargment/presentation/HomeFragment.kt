@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.DiffUtil
@@ -18,14 +17,14 @@ import com.example.paging3example.databinding.FragmentHomeBinding
 import com.example.paging3example.features.fragments.home_fargment.domain.model.GamesEntity
 import com.example.paging3example.features.fragments.home_fargment.domain.viewmodel.HomeViewModel
 import com.example.paging3example.features.fragments.home_fargment.presentation.adapter.HomeAdapter
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import org.koin.android.ext.android.inject
 
-@AndroidEntryPoint
+
 class HomeFragment : Fragment() {
 
     private val binding by lazy { FragmentHomeBinding.inflate(layoutInflater) }
-    private val viewModel: HomeViewModel by viewModels()
+    private val viewModel: HomeViewModel by inject()
     private val pagingAdapter by lazy { HomeAdapter(getGamesItemsDiffCallback()) }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -73,7 +72,10 @@ class HomeFragment : Fragment() {
             when (loadState.refresh) {
                 is LoadState.Loading -> handleLoadingStetVisibility(false)
                 is LoadState.NotLoading -> handleLoadingStetVisibility(true)
-                is LoadState.Error -> showToast(R.string.wrongMessage)
+                is LoadState.Error -> {
+                    handleLoadingStetVisibility(true)
+                    showToast(R.string.wrongMessage)
+                }
 
             }
         }
